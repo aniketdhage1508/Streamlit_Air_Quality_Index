@@ -152,9 +152,8 @@ def main():
         prediction = model.predict(input_data)
         air_quality = prediction[0]
         
-        # Display the prediction result
-        st.write(f"Prediction: {prediction[0]}")
-        if model_name == "Decision Tree Classifier Model" or model_name == "Random Forest Classifier Model" or model_name == "KNN Classifier Model":
+        
+        if model_name == "Random Forest Regressor Model" or model_name == "Logistic Regression Model" or model_name == "Decision Tree Classifier Model" or model_name == "Random Forest Classifier Model" or model_name == "KNN Classifier Model":
             if air_quality == 'Good':
                 st.success(f"Air Quality: {air_quality}")
             elif air_quality == 'Moderate':
